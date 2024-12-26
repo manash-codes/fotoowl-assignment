@@ -1,4 +1,4 @@
-import { addMessage } from "../hooks/useIntantdb";
+import { addMessage } from "../hooks/useIntantDB";
 
 type MessageFieldProps = {
     userID: string,

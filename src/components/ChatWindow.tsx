@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { AppContext } from "../contexts/AppContext";
-import { getMessages } from "../hooks/useIntantdb";
+import { getMessages } from "../hooks/useIntantDB";
 import message from "../types/message";
 import Header from "./Header";
 import Message from "./Message";

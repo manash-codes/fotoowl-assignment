@@ -1,5 +1,5 @@
 import React from "react";
-import { addContact } from "../hooks/useIntantdb";
+import { addContact } from "../hooks/useIntantDB";
 
 const Auth = () => {
 

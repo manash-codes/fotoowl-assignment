@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { AppActionTypes, AppContext } from "../contexts/AppContext";
-import { getContacts, addContact } from "../hooks/useIntantdb";
+import { getContacts, addContact } from "../hooks/useIntantDB";
 import contact from "../types/contacts";
 import { getAvatarIcon, getChatroomID } from "../utils";
 
