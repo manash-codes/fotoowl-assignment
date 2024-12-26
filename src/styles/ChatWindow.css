@@ -6,7 +6,7 @@
   width: 100%;
   overflow: hidden;
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url("./chat-bg.png");
+    url("/public/chat-bg.png");
   padding: 0 16px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
