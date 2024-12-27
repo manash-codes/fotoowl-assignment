@@ -1,50 +1,39 @@
-# React + TypeScript + Vite
+# Instant Chat
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> A simple chat application built with React, TypeScript and Vite.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Chat with other users in real-time
+- Custom User authentication
 
-## Expanding the ESLint configuration
+## Dependencies
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- React
+- TypeScript
+- Vite
+- InstantDB
 
-- Configure the top-level `parserOptions` property like this:
+## How to run on your machine
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+1. Clone the repository
+2. Run `pnpm install`
+3. Update `.env.local` to `.env`
+4. Update `VITE_INSTANT_APP_ID` in `.env`
+5. Run `pnpm run dev` to start the development server
+6. Open your browser and navigate to `http://localhost:5173`
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Instant DB configuration
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+1. Create 2 namespaces such as `users` and `messages`
+2. Follow below schema for `users`
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- `email` (string)
+- `name` (string)
+
+3. Follow below schema for `messages`
+
+- `chatRoomID` (string)
+- `recieverID` (string)
+- `text` (string)
+- `createdAt` (string)
