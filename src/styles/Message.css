@@ -1,3 +1,7 @@
+.card {
+  display: flex;
+}
+
 .message-container {
   background-color: #202c33;
   padding: 10px;

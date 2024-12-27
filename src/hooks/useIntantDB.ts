@@ -12,11 +12,10 @@ const addContact = (email: string, name: string) => {
     )
 }
 
-const addMessage = (text: string, senderID: string, receiverID: string, chatRoomID: string) => {
+const addMessage = (text: string, receiverID: string, chatRoomID: string) => {
     db.transact(
         db.tx.messages[id()].update({
             text,
-            senderID,
             receiverID,
             chatRoomID,
             createdAt: new Date()

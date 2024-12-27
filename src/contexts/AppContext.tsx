@@ -1,6 +1,5 @@
 import React, { createContext, useReducer } from "react";
-import contact from "../types/contacts";
-import message from "../types/message";
+import { contact, message } from "../types";
 
 interface AppContextType {
     contacts: contact[] | [];

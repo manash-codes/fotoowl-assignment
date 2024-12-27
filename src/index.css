@@ -3,7 +3,6 @@
 @import url(./styles/ChatWindow.css);
 @import url(./styles/Message.css);
 @import url(./styles/Header.css);
-@import url(./styles/Auth.css);
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -40,17 +39,7 @@ body {
   margin-bottom: 1rem;
 }
 
-.card {
-  display: flex;
-}
-
 .main {
   display: flex;
   overflow: hidden;
-}
-
-/* utils */
-
-.flex {
-  display: flex;
 }

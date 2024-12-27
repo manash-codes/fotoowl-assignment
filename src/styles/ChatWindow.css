@@ -6,9 +6,21 @@
   width: 100%;
   overflow: hidden;
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url("/public/chat-bg.png");
+    url("/chat-bg.png");
   padding: 0 16px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.auth-info-container {
+  font-size: 18px;
+  text-align: center;
+  line-height: 1.5;
+  margin: 0 auto;
+  background-color: #111b21;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  border-radius: 5px;
+  width: 50%;
 }
 
 .message .card.sender {

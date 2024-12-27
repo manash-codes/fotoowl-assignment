@@ -5,22 +5,18 @@ import { getAvatarIcon } from "../utils";
 const Header = () => {
     const { recepient } = useContext(AppContext);
 
-    const SelectContactMessage = (
-        <div className="heading">Select a contact to start a conversation</div>
-    )
-
-    const ContactCard = (
-        <div className="header">
-            <img className="avatar" src={getAvatarIcon(recepient.name)} alt={`${recepient.name} + avatar`} />
-            <div className="username">{recepient.name}</div>
-        </div>
-    )
-
     return (
         <div className="header-container">
-            {recepient.id ? ContactCard : SelectContactMessage}
+            {recepient.id ? (
+                <div className="header">
+                    <img className="avatar" src={getAvatarIcon(recepient.name)} alt={`${recepient.name} avatar`} />
+                    <div className="username">{recepient.name}</div>
+                </div>
+            ) : (
+                <div className="heading">Select a contact to start a conversation</div>
+            )}
         </div>
-    )
-}
+    );
+};
 
-export default Header
+export default Header;

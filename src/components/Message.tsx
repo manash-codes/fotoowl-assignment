@@ -1,4 +1,4 @@
-import message from "../types/message"
+import { message } from "../types"
 
 type MessageProps = {
     messages: message[]
@@ -8,13 +8,11 @@ type MessageProps = {
 const Message = ({ messages, recepientId }: MessageProps) => {
     return (
         <div className="message">
-            {messages.map((message: message) =>
-                <div key={message.id} className={`card ${message.receiverID === recepientId ? 'sender' : ''}`}>
-                    <div className='message-container'>
-                        {message.text}
-                    </div>
+            {messages.map(({ id, receiverID, text }) => (
+                <div key={id} className={`card ${receiverID === recepientId ? 'sender' : ''}`}>
+                    <div className='message-container'>{text}</div>
                 </div>
-            )}
+            ))}
         </div>
     )
 }
